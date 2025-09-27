@@ -1,0 +1,32 @@
+# requirements.txt
+
+# 核心 LangChain 框架
+langchain
+langchain_ollama
+langchain-unstructured
+langchain-core
+langchain-chroma
+unstructured[local-inference]
+
+# 本地大模型服务和客户端
+ollama
+
+# 向量数据库
+chromadb
+
+# Web 应用框架
+streamlit
+
+# PDF 处理
+pypdf
+PyMuPDF
+
+# OCR 引擎
+paddleocr
+paddlepaddle-gpu
+
+# 图像处理
+Pillow
+
+# API
+fastapi
