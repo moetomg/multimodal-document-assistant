@@ -46,21 +46,20 @@ uvicorn backend_server:app --reload
 
 ### 5. Run the Frontend
 ```bash
-streamlit run frontend_app.py
+streamlit run app.py
 ```
 
 ## Usage
 
-1. Upload PDF or DOCX files in the sidebar to build your knowledge base.
+1. Upload PDF files in the sidebar to build your knowledge base.
 2. Ask questions in the main chat area.
 3. Optionally upload an image with your question for multimodal queries.
 4. Answers will include citations to the source documents.
 
-## Roadmap
-- [ ] Offline evaluation pipeline for model benchmarking
-- [ ] Improved document chunking strategies
-- [ ] Explore on-device/mobile deployment
+## 📝 Future Work
+- Implement an offline evaluation pipeline to benchmark different embedding and generation models
+- Improved document chunking strategies
+- Explore on-device/mobile deployment
 
 ---
 
-*This project demonstrates advanced RAG techniques and end-to-end AI system design.*
