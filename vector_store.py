@@ -21,7 +21,7 @@ STORE_PATH = "storage"
 CHROMA_DB_PATH = os.path.join(STORE_PATH, "chroma_db")
 DOCSTORE_PATH = os.path.join(STORE_PATH, "docstore")
 EMBEDDING_MODEL = "qwen3-embedding:4b"
-LLM_MODEL = "llama3.1:8b"
+LLM_MODEL = "qwen2.5vl:7b"
 
 # Lazily loaded singletons
 _embeddings: Optional[OllamaEmbeddings] = None

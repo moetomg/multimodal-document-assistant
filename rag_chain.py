@@ -8,8 +8,8 @@ from langchain_ollama import ChatOllama
 import ollama
 from vector_store import get_retriever, get_docstore, get_vectorstore
 
-llm = ChatOllama(model="llama3.1:8b", temperature=0.1)
-citation_llm = ChatOllama(model="llama3.1:8b", temperature=0.0, format="json")
+llm = ChatOllama(model="qwen2.5vl:7b", temperature=0.1)
+citation_llm = ChatOllama(model="qwen2.5vl:7b", temperature=0.0, format="json")
 print("RAG chain components initialized successfully.")
 
 def analyze_query_image(image_b64: str) -> str:
@@ -19,7 +19,7 @@ def analyze_query_image(image_b64: str) -> str:
     print("Analyzing user's query image...")
     try:
         response = ollama.chat(
-            model='llama3.1:8b',
+            model='qwen2.5vl:7b',
             messages=[{
                 'role': 'user',
                 'content': 'Describe this image in detail. Focus on key objects, text, charts, and the overall context. This description will be used to find relevant information in a database.',
@@ -57,7 +57,7 @@ def rag_chain_with_source_retrieval(input_question: str, query_image_b64: Option
     if not unique_results:
         if query_image_b64:
              final_answer_response = ollama.chat(
-                model='llama3.1:8b',
+                model='qwen2.5vl:7b',
                 messages=[{'role': 'user', 'content': input_question, 'images': [query_image_b64]}]
             )
              return {"answer": final_answer_response['message']['content'], "sources": []}

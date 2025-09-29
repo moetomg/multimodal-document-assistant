@@ -12,7 +12,7 @@ def check_vector_store():
         return
     try:
         # Use the same embedding model as your RAG chain
-        embeddings = OllamaEmbeddings(model="mxbai-embed-large")
+        embeddings = OllamaEmbeddings(model="qwen3-embedding:4b")
         vector_store = Chroma(
             collection_name="multimodal_rag_persistent",
             persist_directory=DB_PATH,
