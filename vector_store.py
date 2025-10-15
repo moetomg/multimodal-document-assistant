@@ -81,7 +81,7 @@ def generate_image_summary(image_b64: str) -> str:
     print("Generating summary for an image...")
     try:
         response = ollama.chat(
-            model='llama3.1:8b',
+            model='qwen2.5vl:7b',
             messages=[{
                 'role': 'user',
                 'content': 'Provide a detailed description of this image. If it contains charts, graphs, or tables, extract the key information and data. Describe the main subject and any important context.',
@@ -99,7 +99,7 @@ def generate_formula_summary(image_b64: str) -> str:
     print("Generating summary for a formula image...")
     try:
         response = ollama.chat(
-            model='llama3.1:8b',
+            model='qwen2.5vl:7b',
             messages=[{
                 'role': 'user',
                 'content': "This image contains a mathematical or chemical formula. Transcribe it into a standard textual representation like LaTeX or a simple plain text description. For example, for an image of x squared, return 'x^2'.",
